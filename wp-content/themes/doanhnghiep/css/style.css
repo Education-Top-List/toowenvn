@@ -1131,16 +1131,6 @@ li.widget{
 }
 /* sidebar  */
 
-#gallery-1 .gallery-item{
-  margin: 0px !important;
-  padding: 3px;
-}
-#gallery-1 img{
-  border: none;
-  max-width: 110px;
-  height: auto;
-
-}
 
 /* BREADCRUMB */ 
 .breadcrumb{
@@ -1292,6 +1282,7 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
 
 .related_posts{
   margin:30px 0px 20px 0px;
+  clear: both;
 }
 
 .related_posts ul li .thumbnail {

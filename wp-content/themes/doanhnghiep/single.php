@@ -17,7 +17,7 @@ get_header();
 				<?php 
 				if(have_posts()) :
 					while(have_posts()) : the_post(); ?>
-						<div class=" col-sm-9  content_left">
+						<div class=" col-sm-12  content_left">
 					
 							<article class="content_single_post">
 								<div class="single_post_info">
@@ -61,9 +61,6 @@ get_header();
 								</ul>   
 							</div>
 						<?php } ?> 
-						</div>
-						<div class="col-md-3 col-sm-3 sidebar">
-							<?php dynamic_sidebar('sidebar1'); ?> 
 						</div>
 					<?php endwhile;
 				else:

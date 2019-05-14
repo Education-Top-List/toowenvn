@@ -3,8 +3,9 @@ include get_template_directory().'/includes/admin/function-admin.php';
 include get_template_directory().'/includes/admin/core.php';
 include get_template_directory().'/includes/frontend/woocommerce/woocommerce.php';
 include get_template_directory().'/includes/frontend/woocommerce/archive.php';
-include get_template_directory().'/includes/frontend/woocommerce/add_meta_box.php';
+//include get_template_directory().'/includes/frontend/woocommerce/add_meta_box.php';
 include get_template_directory().'/includes/frontend/woocommerce/single-product.php';
+include get_template_directory().'/includes/admin/custom-post-type.php';  
 
 function load_admin_style() {
   wp_register_style( 'admin_css', get_template_directory_uri() . '/css/admin.css', false, '1.0.0' );
@@ -268,4 +269,15 @@ remove_action('wp_head', 'adjacent_posts_rel_link_wp_head');
 
 // Keep old Editor
    add_filter('use_block_editor_for_post', '__return_false');
+
+// Remove description heading in tabs content
+  add_filter('woocommerce_product_description_heading', '__return_null');
+
+// function exclude_category($query) {
+// if ( $query->is_home() ) {
+// $query->set('cat', '-9');
+// }
+// return $query;
+// }
+// add_filter('pre_get_posts', 'exclude_category');﻿
 

@@ -53,18 +53,44 @@ jQuery(document).ready(function(){
 					}
 					]
 				});
-		// STICKY NAVBAR
-		var sticky = document.querySelector('.sticky');
-
-		if (sticky.style.position !== 'sticky') {
-			var stickyTop = sticky.offsetTop;
-
-			document.addEventListener('scroll', function () {
-				window.scrollY >= stickyTop ?
-				sticky.classList.add('fixed_menu') :
-				sticky.classList.remove('fixed_menu');
-			});
-		}
+		// SLIDE
+			jQuery('.loop_post_category_idx').slick({
+				dots: true,
+				infinite: true,
+				speed: 300,
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				autoplay: true,
+				dots: false,
+				autoplaySpeed: 2000,
+					// fade: true,
+					cssEase: 'linear',
+					responsive: [
+					{
+						breakpoint: 1024,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1,
+							infinite: false,
+							dots: false
+						}
+					},
+					{
+						breakpoint: 600,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 1
+						}
+					},
+					{
+						breakpoint: 480,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1
+						}
+					}
+					]
+				});
 
 		// MENU MOBILE
 		jQuery(".icon_mobile_click").click(function(){

@@ -28,7 +28,7 @@ function add_content_after_addtocart() {
     echo '<a href="'.$checkout_url.'?add-to-cart='.$current_product_id.'" class="single_add_to_cart_button button alt">Thanh toán ngay</a>';
   }
 }
-add_action( 'woocommerce_after_add_to_cart_button', 'add_content_after_addtocart' );
+//add_action( 'woocommerce_after_add_to_cart_button', 'add_content_after_addtocart' );
 
 // Remove sku single product
 function bbloomer_remove_product_page_sku( $enabled ) {
@@ -86,4 +86,18 @@ function move_single_product_price() {
     remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
     add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 29);
 }
-add_action('woocommerce_single_product_summary', 'move_single_product_price', 1);
+//add_action('woocommerce_single_product_summary', 'move_single_product_price', 1);
+
+
+/**
+ *  Remove quantity single product
+ */
+function wc_remove_all_quantity_fields( $return, $product ) {
+    return true;
+}
+//add_filter( 'woocommerce_is_sold_individually', 'wc_remove_all_quantity_fields', 10, 2 );
+
+
+// Remove add to cart button + quantity button 
+ remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
+ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );

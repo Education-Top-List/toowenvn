@@ -101,6 +101,7 @@ get_header();
 
 <div class="partners">
 	<div class="container">
+		<ul>
 		<?php
 /**
  * Setup query to show the ‘services’ post type with all posts filtered by ‘home’ category.
@@ -110,7 +111,7 @@ get_header();
     $args = array(  
         'post_type' => 'partners',
         'post_status' => 'publish',
-        'posts_per_page' => 1, 
+        'posts_per_page' => 20, 
         'orderby' => 'title', 
         'order' => 'ASC'
     );
@@ -119,10 +120,11 @@ get_header();
         
     while ( $loop->have_posts() ) : $loop->the_post(); 
     	//echo the_title();
-       	the_post_thumbnail('thumbnail');
+       ?> <li> <figure> <?php the_post_thumbnail();?> </figure> </li> <?php
     endwhile;
     wp_reset_postdata(); 
 ?>
+</ul>
 	</div>
 </div>
 

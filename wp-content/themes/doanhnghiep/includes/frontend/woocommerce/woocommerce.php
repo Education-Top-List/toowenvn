@@ -116,7 +116,7 @@ function disable_shipping_calc_on_cart( $show_shipping ) {
 add_filter( 'woocommerce_cart_ready_to_calc_shipping', 'disable_shipping_calc_on_cart', 99 );
 
 //woocommerce_after_shop_loop_item_title
-add_action( 'woocommerce_after_shop_loop_item_title', 'bbloomer_custom_action', 15 );
+//add_action( 'woocommerce_after_shop_loop_item_title', 'bbloomer_custom_action', 15 );
 
 function bbloomer_custom_action() {
   ?>
@@ -130,5 +130,5 @@ function bbloomer_custom_action() {
 
   <?php
 }
-add_action( 'woocommerce_product_thumbnails', 'bbloomer_custom_action', 10 );
+//add_action( 'woocommerce_product_thumbnails', 'bbloomer_custom_action', 10 );
 

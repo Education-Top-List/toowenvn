@@ -48,9 +48,11 @@ get_header();
 									if( $related ) foreach( $related as $post ) {
 										setup_postdata($post); ?>
 
-										<li class="col-md-4 col-sm-4 col-xs-12">
+									<li class=" col-sm-4 col-xs-12">
 											<div class="list_item_related pw">
-											<figure class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></figure>
+											<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );  ?>
+											<figure class="thumbnail" style="background:url('<?php echo $image[0]; ?>">
+												<a href="<?php the_permalink(); ?>"><?php //the_post_thumbnail(); ?></a></figure>
 											<h4><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
 											</div>
 									

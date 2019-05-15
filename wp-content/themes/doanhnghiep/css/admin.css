@@ -38,3 +38,7 @@ a:hover{
 .nav-tab-wrapper li{
 	margin:0px !important;
 }
+.avatar img{
+	max-width: 120px;
+	height: 70px;
+}

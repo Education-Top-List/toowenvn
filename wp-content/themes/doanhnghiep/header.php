@@ -60,13 +60,28 @@
 						<h2><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h2>
 					<?php } ?>
 				</div>
-				
+				<div class="tg_language">
+						<ul class="site-lang">
+							<?php pll_the_languages(array('show_flags'=>1,'show_names'=>0)); ?>
+						</ul>
+					</div>
+				<div class="search_header">
+						<?php //get_search_form(); ?>
+						<form role="search" method="get" id="searchform" action="<?php echo home_url('/');  ?>">
+							<div class="search">
+								<input type="text" value="<?php the_search_query(); ?>" name="s" id="s" placeholder="Tìm kiếm">
+								<input type="hidden" value="product" name="post_type">
+								<button type="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
+							</div>
+						</form>
+					</div>
 					<nav class="nav nav_primary">
 					<?php 
 					$args = array('theme_location' => 'primary');
 					?>
 					<?php wp_nav_menu($args); ?>
 				</nav>
+					
 			</div>
 		</div>
 			<?php if(is_front_page() && !is_home()){ ?>

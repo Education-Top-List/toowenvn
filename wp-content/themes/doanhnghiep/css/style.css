@@ -964,6 +964,39 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
   top: 0px;
 }
 
+/* SEARCH*/
+
+.search_header {
+    margin: 20px 0px 20px 0px;
+    float:right;
+}
+.search{
+
+  position: relative;
+  min-width: 190px;
+}
+.search button{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: #a52626;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 0px 3px 3px 0px;
+}
+.search button i.fa{
+  color:#fff;
+  font-size: 20px;
+}
+.search input[type="text"]{
+ width: 100%;
+ padding: 10px 60px 10px 10px;
+ border-radius: 3px;
+ border: 1px solid #000;
+}
+
+/* END SEARCH*/
+
 /* SINGLE POST */
 .single-post .g_content , .page-template .g_content{
   margin: 30px 0px 0px 0px;
@@ -1679,7 +1712,7 @@ p.woocommerce-thankyou-order-received {
 }
 
 .woocommerce-pagination ul.page-numbers li span.current{
-  background: #a52626 !important;
+  background: #000094 !important;
   color: #fff !important;
 }
 /* END WOOCOMERCE PAGINATION */
@@ -2449,6 +2482,47 @@ a.added_to_cart{
 [id*="gallery-"]>.gallery-item:nth-child(3n+1){
   clear: both;
 }
+
+.tg_language{
+  float:right;
+}
+
+.site-lang{
+    position: relative;
+    z-index: 1;
+    float:right;
+    margin: 15px 0px 0px 0px;
+}
+.site-lang>li{
+    display: inline-block;
+    padding: 2px;
+    
+}
+.site-lang>li.current-lang{
+    border: 1px solid #433f3f;
+}
+.site-lang>li>a{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    background-size: cover !important;
+    margin: 0px;
+    position: relative;
+}
+
+.site-lang .lang-item-vi a{
+    background:url(../images/flag_vn.png) no-repeat;
+   
+}
+.site-lang .lang-item-en a{
+    background:url(../images/flag_usa.png) no-repeat;
+}
+.site-lang li img{
+    display: none;
+}
+.site-lang li a{
+    display: block;
+}
 /* CSS FOOTER */
 .footer{
   border-top: 2px solid #a52626;
@@ -2550,69 +2624,67 @@ a.added_to_cart{
 }
 
 /*  page-template-page-template-lienhe  */
-.wpcf7 .list_group input, .wpcf7 .list_group select, .wpcf7 .list_group textarea {
-  width: 100%;
-  text-indent: 30px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 15px;
-  border: 1px solid #e6e6e6;
+
+
+
+[class*="form_dangky"] [class*="col-"]{
+     margin:0px 0px 20px 0px;
 }
-.wpcf7 .list_group label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 29px;
-  color: #fff;
-  background: #ffa521;
-  font-size: 18px;
-  text-align: center;
-  line-height: 37px;
-  z-index: 99;
-  max-height: 32px;
+[class*="form_dangky"]  textarea {
+ width: 100%;
+ padding: 5px 10px;
+ border-radius: 3px;
+ border: 1px solid #ccc;
+ height: 120px;
+ resize: none;
+ background: rgba(255,255,255,0.3);
+ color:#fff;
 }
-.wpcf7 .noidung label{
-  max-height: 222px;
+[class*="form_dangky"]  input, [class*="form_dangky"] select {
+ width: 100%;
+ padding: 9px 10px;
+ border-radius: 0px;
+ border: none;
+ background: rgba(255,255,255,0.3);
+ color: #000;
+ border: 1px solid #ccc;
 }
-.wpcf7 .wpcf7-form .list_group {
-  position: relative;
-  margin-bottom: 10px;
+[class*="form_dangky"] input[type="submit"]{
+         background-image: linear-gradient(to left, #000094 0%, #000094 50%, #7171e9 50%, #000094);
+         background-position: 100% 0;
+         background-size: 200% 100%;
+         transition: all 0.3s;
+         font-weight: 700;
+         color:#fff;
+         text-transform: uppercase;
+         font-size: 14px;
+         max-width: 105px;
+         padding: 10px 0px 9px 0px;
 }
-.page-template-page-template-lienhe  .wpcf7  input[type*="submit"]{
-  background: none !important;
-  border: 1px solid #ffa521;
-  padding: 10px 30px;
-  color: #333;
-  font-size: 18px;
-  font-weight: 600;
-  float: right;
-  width: auto;
-  text-indent: 0;
-  text-transform: uppercase;
-  font-weight: 600;
+[class*="form_dangky"] input[type="submit"]:hover{
+     background-position: 0 0;
 }
-.page-template-page-template-lienhe h3.widget-title{
-  font-size: 20px;
-  line-height: 20px;
-  color: #ffa521;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: left;
-  margin: 0px 0px 20px 0px;
+[class*="form_dangky"]{
+  display: table;
+  margin:0px -10px;
 }
-.page-template-page-template-lienhe .panel-grid>.panel-grid-cell:nth-child(2) h3.widget-title {
-  text-transform: unset;
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing{
+     border:2px solid #fff !important;
+     color:red !important;
+     clear: both;
+     text-align: center;
 }
-.page-template-page-template-lienhe  .panel-layout .textwidget p{
-  line-height: 25px;
-  font-size: 14px;
+span.wpcf7-not-valid-tip{
+     color:#red !important;
+     margin: 5px 0px 0px 0px;
+}
+div.wpcf7-response-output{
+     clear: both;
+     color:#000 !important;
+     border:2px solid #000094 !important;
+     text-align: center;
 }
 
-.page-template-page-template-lienhe .textwidget h2 {
-  font-size: 16px;
-  font-weight: 700;
-}
 /*  end page-template-page-template-lienhe  */
 
 

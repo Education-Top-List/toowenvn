@@ -36,7 +36,7 @@ get_header();
 							</article>
 
 							<!-- fb-comment-area -->
-							<div class="fb-comments" data-href="<?php echo get_permalink(); ?>" data-order-by="reverse_time" data-width="855" data-numposts="20" data-colorscheme="light" ></div>
+							<!-- <div class="fb-comments" data-href="<?php echo get_permalink(); ?>" data-order-by="reverse_time" data-width="855" data-numposts="20" data-colorscheme="light" ></div> -->
 
 							<?php $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 6, 'post__not_in' => array($post->ID) ) ); ?>
 							<?php if($related){ ?>

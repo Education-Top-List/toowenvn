@@ -16,6 +16,9 @@ jQuery(document).ready(function(){
 					}, 1000);
 				}); 
 
+	    jQuery('.btn-click-search').click(function(){
+	    	jQuery('#searchform').toggle(300);
+	    });
 
 		// MENU MOBILE
 		jQuery(".icon_mobile_click").click(function(){
@@ -41,10 +44,10 @@ jQuery(document).ready(function(){
 			jQuery('.close_menu').hide();
 			jQuery(this).hide();
 			jQuery('.top_header .icon_mobile_click').fadeIn(300);
-				if(jQuery('.middle_header').hasClass('fixed_menu')){
+			if(jQuery('.middle_header').hasClass('fixed_menu')){
 				jQuery('.middle_header.fixed_menu .icon_mobile_click').show();
 			}
-			});
+		});
 		jQuery("#menu_mobile_full ul li a").click(function(){
 			jQuery(".icon_mobile_click").fadeIn(300);
 			jQuery("#page_wrapper").removeClass('page_wrapper_active');
@@ -65,18 +68,18 @@ jQuery(document).ready(function(){
 		}).children('ul').children().click(function(event){event.stopPropagation();});
 
 			//menu cap 4
-		jQuery('.mobile-menu ul.menu>li>ul.sub-menu>li>ul.sub-menu').children().has('ul.sub-menu').click(function(){
-			jQuery(this).children('ul.sub-menu').slideToggle();
-		}).children('ul').children().click(function(event){event.stopPropagation();});
+			jQuery('.mobile-menu ul.menu>li>ul.sub-menu>li>ul.sub-menu').children().has('ul.sub-menu').click(function(){
+				jQuery(this).children('ul.sub-menu').slideToggle();
+			}).children('ul').children().click(function(event){event.stopPropagation();});
 
 
-		jQuery('.mobile-menu ul.menu li').has('ul.sub-menu').click(function(event){
-			jQuery(this).toggleClass('editBefore_mobile');
-		});
-		jQuery('.mobile-menu ul.menu').children().has('ul.sub-menu').addClass('menu-item-has-children');
-		jQuery('.mobile-menu ul.menu>li').click(function(){
-			$(this).addClass('active').siblings().removeClass('active, editBefore_mobile');
-		});
+			jQuery('.mobile-menu ul.menu li').has('ul.sub-menu').click(function(event){
+				jQuery(this).toggleClass('editBefore_mobile');
+			});
+			jQuery('.mobile-menu ul.menu').children().has('ul.sub-menu').addClass('menu-item-has-children');
+			jQuery('.mobile-menu ul.menu>li').click(function(){
+				$(this).addClass('active').siblings().removeClass('active, editBefore_mobile');
+			});
 
 		// list_products_categories
 		jQuery('.list_products_categories>ul').children().has('ul.sub_product_category').click(function(){
@@ -96,48 +99,32 @@ jQuery(document).ready(function(){
 		});
 
 		var width = jQuery(window).width();
-		if(width>1100){
-			var cart = jQuery('.g_cart');
-		addToCart = $('.tg_btn_acts li.add_c a.add_to_cart_button');
-		addToCart.on('click', function (evt) {
-	
-			var el = $(this),
-			item = el.parents('.product_inner'),
-			img = item.find('img'),
-			cartTopOffset = cart.offset().top - item.offset().top,
-			cartLeftOffset = cart.offset().left - item.offset().left;
-			var flyingImg = $('<img class="b-flying-img">');
-			flyingImg.attr('src', img.attr('src'));
-			flyingImg.css('width', '200').css('height', '200');
-			flyingImg.animate({
-				top: cartTopOffset,
-				left: cartLeftOffset,
-				width: 50,
-				height: 50,
-				opacity: 0.1
-			}, 800, function () {
-				flyingImg.remove();
-			});
-			el.parents('.product_inner').append(flyingImg);
-		});
-		} //endif
+
 		jQuery('span.onsale').text('Sale');
 
 		jQuery('.single-product .woocommerce-product-gallery ul li').click(function(){
 			var link_img_preview =  jQuery(this).html();
 			jQuery('.tg_img_product img').replaceWith(link_img_preview);
 		});
-
+		if(width>1100){
+			jQuery(`.page-template-page-template-gioithieu .g_content .textwidget p,
+				.page-template-page-template-gioithieu .g_content .textwidget figure
+				`)
+			.attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
+			jQuery('.page-template-page-template-gioithieu .g_content h3.widget-title')
+			.attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
+			new WOW().init();
+		}
 					// SLIDE
-			jQuery('.woocommerce-product-gallery ul').slick({
-				dots: true,
-				infinite: true,
-				speed: 300,
-				slidesToShow: 3,
-				slidesToScroll: 1,
-				autoplay: true,
-				dots: false,
-				autoplaySpeed: 2000,
+					jQuery('.woocommerce-product-gallery ul').slick({
+						dots: true,
+						infinite: true,
+						speed: 300,
+						slidesToShow: 3,
+						slidesToScroll: 1,
+						autoplay: true,
+						dots: false,
+						autoplaySpeed: 2000,
 					// fade: true,
 					cssEase: 'linear',
 					responsive: [
@@ -167,15 +154,15 @@ jQuery(document).ready(function(){
 					]
 				});
 		// SLIDE
-			jQuery('.loop_post_category_idx').slick({
-				dots: true,
-				infinite: true,
-				speed: 300,
-				slidesToShow: 3,
-				slidesToScroll: 1,
-				autoplay: true,
-				dots: false,
-				autoplaySpeed: 2000,
+		jQuery('.loop_post_category_idx').slick({
+			dots: true,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			autoplay: true,
+			dots: false,
+			autoplaySpeed: 2000,
 					// fade: true,
 					cssEase: 'linear',
 					responsive: [
@@ -242,5 +229,5 @@ jQuery(document).ready(function(){
 					}
 					]
 				});
-	});
+		});
 

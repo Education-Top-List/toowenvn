@@ -16,7 +16,7 @@ a, a:hover{
   text-decoration: none !important;
 }
 a:hover{
-  color:#f0a52b;
+  color: #e6e6f5;
 }
 :hover,:focus{
   outline: none !important;
@@ -39,9 +39,12 @@ body{
   margin:0px auto;
   width: 100%;
 }
-.single br , p:empty{
+.single br{
   display: none !important;
 }
+ p:empty{
+  display: none;
+ }
 img{
   max-width: 100%;
   height: auto;
@@ -320,7 +323,7 @@ span.woocommerce-Price-amount{
   right: 8px;
   top: 50%;
   margin: -6px 0px 0px 0px;
-  color: #fff;
+  color: #000;
   font-size: 11px !important;
 }
 .nav_primary ul li a{
@@ -334,7 +337,7 @@ span.woocommerce-Price-amount{
   line-height: 22px;
 }
 .nav_primary ul.menu>li>a:hover{
-  color:#000094 !important;
+  color: #f0a52b !important;
 }
 .nav_primary ul>li>ul.sub-menu{
   position: absolute;
@@ -463,7 +466,7 @@ article.post{
  width: 30px;
  height: 30px;
  border-radius: 50%;
- background: #a52626;
+ background: #000094;
  color: #fff;
  text-align: center;
  line-height: 30px;
@@ -967,8 +970,22 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
 /* SEARCH*/
 
 .search_header {
-    margin: 20px 0px 20px 0px;
+    margin: 25px 20px 0px 15px;
     float:right;
+    position: relative;
+}
+.search_header #searchform{
+  display: none;
+  position: absolute;
+  width: 300px;
+  left: -280px;
+  bottom: -47px;
+}
+.search_header .btn-click-search{
+  cursor: pointer;
+}
+.search_header .btn-click-search i.fa{
+  font-size: 20px;
 }
 .search{
 
@@ -979,10 +996,11 @@ ul.list_categories li.parent_cat>a:not(:first-child)::before{
   position: absolute;
   top: 0px;
   right: 0px;
-  background: #a52626;
+  background: #000094;
   border: none;
-  padding: 9px 20px;
+  padding: 11px 20px;
   border-radius: 0px 3px 3px 0px;
+  color: #fff;
 }
 .search button i.fa{
   color:#fff;
@@ -1561,6 +1579,7 @@ p.woocommerce-thankyou-order-received {
 
 .item_loop_post_category_idx .list_product_category>.list_item_product , .archive .list_item_product{
   padding: 0px 10px;
+  margin: 0px 0px 30px 0px;
 }
 .archive .list_products_archive>.list_item_product:last-child{
   border-left: none;
@@ -1689,8 +1708,8 @@ p.woocommerce-thankyou-order-received {
 
 .product_area_index{
   /* border-top: 1px solid #e6e6e6; */
-  padding: 20px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  margin: 40px 0px 0px 0px;
 }
 
 
@@ -2131,11 +2150,11 @@ p.woocommerce-thankyou-order-received {
 .single-product .related>h2::before{
   content: "";
   position: absolute;
-  top: 32px;
+  top: 37px;
   width: 100%;
-  max-width: 200px;
+  max-width: 80px;
   height: 2px;
-  background: #a52626;
+  background: #f0a52b;
 }
 .single-product .related .product_inner .tg_btn_acts{
   display: none;
@@ -2145,7 +2164,7 @@ p.woocommerce-thankyou-order-received {
   margin:15px 0px 5px 0px;
 }
 .single-product .related .product_inner:hover .thumbnail{
-  border:1px solid #ffa521;
+  border: 1px solid #000094;
 }
 .single-product .related .list_item_product .product_inner{
   border:none;
@@ -2466,6 +2485,12 @@ a.added_to_cart{
   height: 100px;
   position: relative;
 }
+.partners{
+  margin:30px 0px 0px 0px;
+}
+.partners .slick-slider{
+  margin:0px !important;
+}
 .partners ul li{
   padding:0px 5px;
 }
@@ -2491,7 +2516,7 @@ a.added_to_cart{
     position: relative;
     z-index: 1;
     float:right;
-    margin: 15px 0px 0px 0px;
+    margin: 22px 0px 0px 0px;
 }
 .site-lang>li{
     display: inline-block;
@@ -2523,17 +2548,107 @@ a.added_to_cart{
 .site-lang li a{
     display: block;
 }
+
+
+
+/* page-template-page-template-gioithieu */
+
+.page-template-page-template-gioithieu .g_content  h3.widget-title{
+         text-align: center;
+         font-size: 32px;
+         line-height: 48px;
+         position: relative;
+         color: #090997;
+         margin: 0px 0px 52px 0px;
+         text-transform: uppercase;
+         font-weight: 700;
+}
+.page-template-page-template-gioithieu  .g_content  h3.widget-title::before{
+     position: absolute;
+     content:url(../images/under_text.png);
+     bottom: -39px;
+     left: 0px;
+     right: 0px;
+     text-align: center;
+     margin: 0px auto;
+}
+
+.page-template-page-template-gioithieu  .g_content .textwidget p{
+          font-size: 17px;
+          line-height: 30px;
+          margin: 0px;
+}
+.page-template-page-template-gioithieu .textwidget figure{
+  text-align: center;
+  margin: 10px 0px;
+}
+.page-template-page-template-gioithieu .major figure{
+     max-width: 170px;
+     border: 2px solid #b52622;
+     border-radius: 50%;
+     margin: 0px auto 20px auto;
+     height: 160px;
+     position: relative;
+}
+.page-template-page-template-gioithieu .major figure img{
+     max-width: 100px;
+     position: absolute;
+     top:50%;
+     left:50%;
+     transform:translate(-50%,-50%);
+}
+.page-template-page-template-gioithieu .major {
+     position: relative;
+     padding: 32px 0px 20px 0px;
+}
+.page-template-page-template-gioithieu .major::before{
+         content: "";
+         position: absolute;
+         width: 100%;
+         max-width: 100px;
+         height: 3px;
+         background: #b52622;
+         left: 0px;
+         right: 0px;
+         margin: 0px auto;
+         text-align: center;
+         top: 0px;
+}
+.page-template-page-template-gioithieu .major .textwidget{
+     text-align: center;
+}
+.page-template-page-template-gioithieu .major .widget-title{
+     text-align: center;
+     text-transform: uppercase;
+     margin: 10px 0px 30px 0px;
+}
+.page-template-page-template-gioithieu .major .textwidget h4{
+     font-size: 17px;
+     font-weight: 800;
+     color: #b52622;
+}
+
 /* CSS FOOTER */
 .footer{
-  border-top: 2px solid #a52626;
+  border-top: 2px solid #d8d8d8;
   padding: 35px 0px 35px 0px;
-  margin:70px 0px 0px 0px;
+  margin: 50px 0px 0px 0px;
 }
 .footer  h3.widget-title{
  font-size: 18px;
  text-transform: uppercase;
- font-weight: 700; 
- margin: 0px 0px 15px 0px;
+ font-weight: 700;
+ margin: 0px 0px 30px 0px;
+ position: relative;
+}
+.footer  h3.widget-title::before{
+  content:"";
+  position: absolute;
+  width: 100%;
+  max-width: 50px;
+  height: 2px;
+  background: #f0a52b;
+  bottom: -11px;
 }
 .footer-widget-area  iframe{
   max-width: 100%;

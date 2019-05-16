@@ -111,7 +111,7 @@ function featured_images_setup(){
       echo '<li><a href="';
       echo home_url();
       echo '">';
-      echo 'Trang chủ ';
+      if(get_locale() == 'en_US'){ echo 'Home';} else{ echo 'Trang chủ ';}
       echo "</a><li>";
       if (is_category() || is_single()) {
         echo '';
@@ -273,11 +273,21 @@ remove_action('wp_head', 'adjacent_posts_rel_link_wp_head');
 // Remove description heading in tabs content
   add_filter('woocommerce_product_description_heading', '__return_null');
 
-// function exclude_category($query) {
-// if ( $query->is_home() ) {
-// $query->set('cat', '-9');
-// }
-// return $query;
-// }
-// add_filter('pre_get_posts', 'exclude_category');﻿
+
+/* WRAP IMAGE POST CONTENT WITH FIGURE*/
+function filter_images($content){
+    return preg_replace('/<img (.*) \/>\s*/iU', '<figure><img \1 /></figure>', $content);
+}
+add_filter('the_content', 'filter_images');
+/* END WRAP IMAGE POST CONTENT WITH FIGURE*/
+
+/* REMOVE EMPTY P */
+
+add_filter('the_content', 'remove_empty_p', 20, 1);
+function remove_empty_p($content){
+    $content = force_balance_tags($content);
+    return preg_replace('#<p>\s*+(<br\s*/*>)?\s*</p>#i', '', $content);
+}
+
+
 

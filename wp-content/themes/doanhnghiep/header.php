@@ -11,6 +11,7 @@
 	<?php $url_site =  get_site_url('null','/wp-content/themes/doanhnghiep', 'http');  ?>
 	<!-- css -->
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/slick.css">
+	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/animate.css">
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/font-awesome.min.css">
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/style.css">
@@ -66,14 +67,11 @@
 						</ul>
 					</div>
 				<div class="search_header">
-						<?php //get_search_form(); ?>
-						<form role="search" method="get" id="searchform" action="<?php echo home_url('/');  ?>">
-							<div class="search">
-								<input type="text" value="<?php the_search_query(); ?>" name="s" id="s" placeholder="Tìm kiếm">
-								<input type="hidden" value="product" name="post_type">
-								<button type="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
-							</div>
-						</form>
+						<div class="btn-click-search">
+							<i class="fa fa-search"></i>
+						</div>
+						<?php get_search_form(); ?>
+						
 					</div>
 					<nav class="nav nav_primary">
 					<?php 

@@ -50,12 +50,12 @@ get_header();
 						  			
 						  			<div class="item_loop_post_category_idx">
 						  				<div class="top_menu_list_product">
-						  					<div class="parent_catgories_idx">
+						  					<div class="parent_catgories_idx pw">
 
 						  						<?php $thumbnail_id = get_woocommerce_term_meta( $category_id, 'thumbnail_id', true );
 						  							$image = wp_get_attachment_url( $thumbnail_id );
 						  						 ?>
-						  								<figure class="thumbnail" style="background:url(<?php echo $image; ?>);" class="thumb_cat" >
+						  								<figure class="thumbnail" style="background:url(<?php echo $image; ?>);" >
 						  									<a href="<?php echo get_category_link($category_id) ?>"><img src="<?php echo $image; ?>"></a>
 						  								</figure>
 						  						<?php echo '<a href="'. get_term_link($cat->slug, 'product_cat') .'">'. $cat->name .'</a>';?>
@@ -120,7 +120,7 @@ get_header();
         
     while ( $loop->have_posts() ) : $loop->the_post(); 
     	//echo the_title();
-       ?> <li> <figure> <?php the_post_thumbnail();?> </figure> </li> <?php
+       ?> <li class="pw"> <figure class="thumbnail"> <?php the_post_thumbnail();?> </figure> </li> <?php
     endwhile;
     wp_reset_postdata(); 
 ?>

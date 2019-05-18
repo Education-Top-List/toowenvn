@@ -17,10 +17,10 @@
 /* CONTACT CPT */
 function sunset_contact_custom_post_type() {
 	$labels = array(
-		'name' 				=> 'Đối tác',
-		'singular_name' 	=> 'Đối tác',
-		'menu_name'			=> 'Đối tác',
-		'name_admin_bar'	=> 'Đối tác'
+		'name' 				=> 'Partners',
+		'singular_name' 	=> 'Partners',
+		'menu_name'			=> 'Partners',
+		'name_admin_bar'	=> 'Partners'
 	);
 	
 	$args = array(

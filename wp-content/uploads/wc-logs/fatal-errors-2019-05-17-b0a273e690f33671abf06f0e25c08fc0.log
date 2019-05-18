@@ -1,0 +1,60 @@
+2019-05-17T18:43:22+00:00 CRITICAL Uncaught Error: Call to undefined function pll_the_languages() in C:\xampp\htdocs\toowenvn\wp-content\themes\doanhnghiep\header.php:66
+Stack trace:
+#0 C:\xampp\htdocs\toowenvn\wp-includes\template.php(722): require_once()
+#1 C:\xampp\htdocs\toowenvn\wp-includes\template.php(671): load_template('C:\\xampp\\htdocs...', true)
+#2 C:\xampp\htdocs\toowenvn\wp-includes\general-template.php(41): locate_template(Array, true)
+#3 C:\xampp\htdocs\toowenvn\wp-content\themes\doanhnghiep\page-template-trangchu.php(6): get_header()
+#4 C:\xampp\htdocs\toowenvn\wp-includes\template-loader.php(78): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\toowenvn\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\toowenvn\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\toowenvn\wp-content\themes\doanhnghiep\header.php on line 66
+
+2019-05-17T18:43:23+00:00 CRITICAL Uncaught Error: Call to undefined function pll_the_languages() in C:\xampp\htdocs\toowenvn\wp-content\themes\doanhnghiep\header.php:66
+Stack trace:
+#0 C:\xampp\htdocs\toowenvn\wp-includes\template.php(722): require_once()
+#1 C:\xampp\htdocs\toowenvn\wp-includes\template.php(671): load_template('C:\\xampp\\htdocs...', true)
+#2 C:\xampp\htdocs\toowenvn\wp-includes\general-template.php(41): locate_template(Array, true)
+#3 C:\xampp\htdocs\toowenvn\wp-content\themes\doanhnghiep\page-template-trangchu.php(6): get_header()
+#4 C:\xampp\htdocs\toowenvn\wp-includes\template-loader.php(78): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\toowenvn\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\toowenvn\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\toowenvn\wp-content\themes\doanhnghiep\header.php on line 66
+
+2019-05-17T18:44:17+00:00 CRITICAL Uncaught Error: Call to undefined function pll_the_languages() in C:\xampp\htdocs\toowenvn\wp-content\themes\doanhnghiep\header.php:66
+Stack trace:
+#0 C:\xampp\htdocs\toowenvn\wp-includes\template.php(722): require_once()
+#1 C:\xampp\htdocs\toowenvn\wp-includes\template.php(671): load_template('C:\\xampp\\htdocs...', true)
+#2 C:\xampp\htdocs\toowenvn\wp-includes\general-template.php(41): locate_template(Array, true)
+#3 C:\xampp\htdocs\toowenvn\wp-content\themes\doanhnghiep\page-template-trangchu.php(6): get_header()
+#4 C:\xampp\htdocs\toowenvn\wp-includes\template-loader.php(78): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\toowenvn\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\toowenvn\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\toowenvn\wp-content\themes\doanhnghiep\header.php on line 66
+
+2019-05-17T18:44:18+00:00 CRITICAL Uncaught Error: Call to undefined function pll_the_languages() in C:\xampp\htdocs\toowenvn\wp-content\themes\doanhnghiep\header.php:66
+Stack trace:
+#0 C:\xampp\htdocs\toowenvn\wp-includes\template.php(722): require_once()
+#1 C:\xampp\htdocs\toowenvn\wp-includes\template.php(671): load_template('C:\\xampp\\htdocs...', true)
+#2 C:\xampp\htdocs\toowenvn\wp-includes\general-template.php(41): locate_template(Array, true)
+#3 C:\xampp\htdocs\toowenvn\wp-content\themes\doanhnghiep\woocommerce\archive-product.php(20): get_header('shop')
+#4 C:\xampp\htdocs\toowenvn\wp-includes\template-loader.php(78): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\toowenvn\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\toowenvn\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\toowenvn\wp-content\themes\doanhnghiep\header.php on line 66
+
+2019-05-17T18:44:39+00:00 CRITICAL Uncaught Error: Call to undefined function pll_the_languages() in C:\xampp\htdocs\toowenvn\wp-content\themes\doanhnghiep\header.php:66
+Stack trace:
+#0 C:\xampp\htdocs\toowenvn\wp-includes\template.php(722): require_once()
+#1 C:\xampp\htdocs\toowenvn\wp-includes\template.php(671): load_template('C:\\xampp\\htdocs...', true)
+#2 C:\xampp\htdocs\toowenvn\wp-includes\general-template.php(41): locate_template(Array, true)
+#3 C:\xampp\htdocs\toowenvn\wp-content\themes\doanhnghiep\page-template-trangchu.php(6): get_header()
+#4 C:\xampp\htdocs\toowenvn\wp-includes\template-loader.php(78): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\toowenvn\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\toowenvn\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\toowenvn\wp-content\themes\doanhnghiep\header.php on line 66
+

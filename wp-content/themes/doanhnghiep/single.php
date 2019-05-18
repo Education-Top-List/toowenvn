@@ -41,7 +41,7 @@ get_header();
 							<?php $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 6, 'post__not_in' => array($post->ID) ) ); ?>
 							<?php if($related){ ?>
 							<div class="related_posts">
-								<h2>Tin cùng chuyên mục</h2>
+								<h2><?php if(get_locale() == 'en_US'){?>Related Posts<?php } else { ?> Tin cùng chuyên mục  <?php } ?></h2>
 								<ul class="row"> 
 									<?php
 									
@@ -79,5 +79,4 @@ get_header();
 
 
 <?php get_footer(); ?>
-
 

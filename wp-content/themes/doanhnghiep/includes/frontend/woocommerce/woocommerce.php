@@ -72,7 +72,7 @@ function jk_woocommerce_breadcrumbs() {
     'wrap_after'  => '</ul></div>',
     'before'      => '<li>',
     'after'       => '</li>',
-    'home'        => _x( 'Trang chủ', 'breadcrumb', 'woocommerce' ),
+    'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
   );
 }
 // Remove the product rating display on product loops

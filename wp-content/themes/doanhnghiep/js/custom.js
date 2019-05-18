@@ -111,10 +111,16 @@ jQuery(document).ready(function(){
 				.page-template-page-template-gioithieu .g_content .textwidget figure
 				`)
 			.attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
-			jQuery('.page-template-page-template-gioithieu .g_content h3.widget-title')
-			.attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
+			jQuery('.page-template-page-template-gioithieu .g_content h3.widget-title, .home .logo_site').attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated zoomIn ");
+			jQuery('.list_products_archive>li:nth-child(1)').attr({"data-wow-delay" : "0.3s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
+			jQuery('.list_products_archive>li:nth-child(2)').attr({"data-wow-delay" : "0.4s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
+			jQuery('.list_products_archive>li:nth-child(3)').attr({"data-wow-delay" : "0.5s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
+			jQuery('.list_products_archive>li:nth-child(4)').attr({"data-wow-delay" : "0.6s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
+			jQuery('.list_products_archive>li:nth-child(5)').attr({"data-wow-delay" : "0.7s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
+			jQuery('.list_products_archive>li:nth-child(6)').attr({"data-wow-delay" : "0.8s", "data-wow-duration" : "1s"}).addClass("wow animated fadeInUp ");
 			new WOW().init();
 		}
+
 					// SLIDE
 					jQuery('.woocommerce-product-gallery ul').slick({
 						dots: true,

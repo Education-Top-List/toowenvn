@@ -63,17 +63,15 @@ function featured_images_setup(){
   add_theme_support('post-formats',array('aside','gallery','link'));
   // ADD OUR WIDGETS LOCATION
   function our_widget_inits(){
+  register_sidebar(array(
+    'name' => 'Footer area 1 En',
+    'id' => 'footer1_en',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+  ));
     register_sidebar(array(
-      'name' => 'Sidebar',
-      'id' => 'sidebar1',
-      'before_widget' => '<div id="%1$s" class="widget %2$s widget_area">',
-      'after_widget' => "</div>",
-      'before_title' => '<h3 class="widget-title">',
-      'after_title' => '</h3>',
-    ));
-      register_sidebar(array(
-    'name' => 'Footer area 1',
-    'id' => 'footer1',
+    'name' => 'Footer area 1 Vi',
+    'id' => 'footer1_vi',
     'before_title' => '<h3 class="widget-title">',
     'after_title' => '</h3>',
   ));

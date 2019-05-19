@@ -41,15 +41,7 @@
 	<header class="header">
 		<div class="top_header">
 			<!-- display account top_header mobile -->
-			<?php if (is_user_logged_in() && wp_is_mobile() ): ?>
-			<div class="after_login after_login_mb">
-				<a href="<?php echo get_site_url();?>/tai-khoan">	
-					<?php  $current_user = wp_get_current_user();
-					echo '' . $current_user->user_login . '';
-					?></a>
-					| <a href="<?php echo wp_logout_url(); ?>" > Đăng xuất</a>
-				</div>
-			<?php endif; ?>
+	
 			<span class="icon_mobile_click"><i class="fa fa-bars" aria-hidden="true"></i></span>
 			<div class="container">
 				<div class="logo_site">

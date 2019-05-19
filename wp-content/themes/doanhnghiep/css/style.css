@@ -3,6 +3,7 @@
 html{
   margin:0px !important;
   padding:0px !important;
+  overflow-x: hidden;
 }
 
 ul{
@@ -33,14 +34,12 @@ body{
  color: #333333;
  position: relative;
  font-family: rbt;
+ overflow-x: hidden;
 }
 .container{
   max-width: 1230px;
   margin:0px auto;
   width: 100%;
-}
-.single br{
-  display: none !important;
 }
  p:empty{
   display: none;
@@ -89,7 +88,7 @@ input:focus::-webkit-input-placeholder , textarea:focus::-webkit-input-placehold
 }
 .top_header{
   position: relative;
-  border: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 #page_wrapper{
   transition: all 0.3s;
@@ -966,7 +965,7 @@ ul.list_categories li{
 ul.list_categories li.parent_cat{
   padding: 10px 20px;
   color: #fff;
-  background: #a52626;
+  background: #000094;
 }
 ul.list_categories li.parent_cat a{
   color:#fff;
@@ -2780,6 +2779,10 @@ a.added_to_cart{
  color:#fff;
 }
 
+.page-template-page-template-gioithieu .g_content{
+  margin:40px 0px 0px 0px;
+}
+
 /*  page-template-page-template-lienhe  */
 
 
@@ -2795,7 +2798,7 @@ a.added_to_cart{
  height: 120px;
  resize: none;
  background: rgba(255,255,255,0.3);
- color:#fff;
+ color:#000;
 }
 [class*="form_dangky"]  input, [class*="form_dangky"] select {
  width: 100%;
@@ -2936,6 +2939,15 @@ div.wpcf7-response-output{
     .nav_primary{
       display: none;
     }
+    .slick-prev{
+      left:-10px !important;
+    }
+    .slick-next {
+    right: -10px !important;
+}
+    .site-lang{
+      margin: 22px 40px 0px 0px;
+    }
     .tg_commit ul li .textwidget p{
       font-size: 15px;
     }
@@ -2945,7 +2957,8 @@ div.wpcf7-response-output{
     }
 
     .top_header .icon_mobile_click{
-      display: none !important;
+      display: block;
+      top: 20px;
     }
     .banner_idx .col-sm-8 ,  .banner_idx .col-sm-4{
       width: 100%;
@@ -2961,7 +2974,7 @@ div.wpcf7-response-output{
       display: block;
     }
     .list_item_product .product_inner, .archive .list_item_product .product_inner{
-      min-height: 360px;
+      min-height: 350px;
     }
  }
 
@@ -3050,7 +3063,8 @@ div.wpcf7-response-output{
     background-size: contain !important;
   }
   .list_item_product .product_inner, .archive .list_item_product .product_inner{
-    min-height: 320px;
+    min-height: initial;
+    margin: 0px 0px 30px 0px;
   }
   .list_item_product:nth-child(3n+1){
     clear: none;
@@ -3159,7 +3173,7 @@ div.wpcf7-response-output{
     height: 160px;
   }
   .list_item_product:nth-child(2n+1) .product_inner  {
-    border-left: 1px solid #e6e6e6;
+    border-left: none;
   }
   /* end achirve product*/
 

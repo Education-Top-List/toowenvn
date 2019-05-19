@@ -3,9 +3,9 @@
 <footer class="footer">
 	<div class="container">
 	   <div class="row">
-        <?php if(is_active_sidebar('footer1')) {?>
+        <?php if(is_active_sidebar('footer1_vi') || is_active_sidebar('footer1_en')) {?>
             <div class="footer-widget-area col-sm-4">
-              <?php dynamic_sidebar('footer1'); ?>
+             <?php if(get_locale() == 'en_US'){ dynamic_sidebar('footer1_en'); } else { dynamic_sidebar('footer1_vi'); } ?>
             </div>
           <?php } ?>  
      
